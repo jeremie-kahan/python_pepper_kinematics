@@ -1,0 +1,10 @@
+README.rst
+setup.py
+pepper_kinematics/__init__.py
+pepper_kinematics/forward_kinematics.py
+pepper_kinematics/inverse_kinematics.py
+pepper_kinematics.egg-info/PKG-INFO
+pepper_kinematics.egg-info/SOURCES.txt
+pepper_kinematics.egg-info/dependency_links.txt
+pepper_kinematics.egg-info/requires.txt
+pepper_kinematics.egg-info/top_level.txt

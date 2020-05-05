@@ -15,6 +15,45 @@ left_arm_tags = ["LShoulderPitch", "LShoulderRoll", "LElbowYaw", "LElbowRoll", "
 left_arm_initial_pose = [p[0] * p[1] for p in zip(right_arm_initial_pose, _inverse_case)]
 left_arm_work_pose = [p[0] * p[1] for p in zip(right_arm_work_pose, _inverse_case)]
 
+
+#https://digitalcommons.wpi.edu/cgi/viewcontent.cgi?article=3252&context=mqp-all
+
+
+#Import right/left_arm_current_pose or calculate it from functions below
+
+def body_limits(right_arm_tags, right_arm_current_pose, left_arm_tags, left_arm_current_pose):
+    lower_limits = [-2.0857 -1.5620, -2.0857, 0.0087, -1.8239]
+    upper_limits = [2.0857, -0.0087, 2.0857, 1.5620, 1.8239]
+    step = 0
+    message = ""
+    while ((message == "") and (step =< 4)):
+        if ((lower_limits[step] < right_arm_current_pose[step]) or (upper_limits[step] > right_arm_current_pose[step]):
+            message = "Error, position inaccurate")
+        step += 1
+    print(message)
+
+
+def Stand(R_target_pos, R_target_ori, L_target_pos, L_target_ori):
+    R_angles = [1.57, 0.0087, -1.57, -0.0087, 0.0]
+    L_angles = [1.57, -1.57, -1.0, -0.0087, 0.0]
+    right_arm_set_position(R_angles, R_target_pos, R_target_ori, R_epsilon=0.0001)
+    left_arm_set_position(L_angles, L_target_pos, L_target_ori, L_epsilon = 0.0001)
+
+def StandZero(R_target_pos, R_target_ori, L_target_pos, L_target_ori):
+    R_angles = [0.0, 0.0087, 0.0, -0.0087, 0.0]
+    L_angles = [0.0, 0.0, -1.0, -0.0087, 0.0]    
+    right_arm_set_position(R_angles, R_target_pos, R_target_ori, R_epsilon=0.0001)
+    left_arm_set_position(L_angles, L_target_pos, L_target_ori, L_epsilon = 0.0001)
+
+def Crouch(R_target_pos, R_target_ori L_target_pos, L_target_ori):
+    R_angles = [1.57, 0.0087, -1.8239, -0.0087, 0.0]
+    L_angles = [1.57, -1.8239, -1.0, -0.0087, 0.0]    
+    right_arm_set_position(R_angles, R_target_pos, R_target_ori, R_epsilon=0.0001)
+    left_arm_set_position(L_angles, L_target_pos, L_target_ori, L_epsilon = 0.0001)
+
+
+
+
     
 def right_arm_get_position(angles):
     """
@@ -61,5 +100,3 @@ def right_arm_set_position(angles, target_pos, target_ori, epsilon=0.0001):
 
 def left_arm_set_position(angles, target_pos, target_ori, epsilon = 0.0001):
     return ik.calc_inv_pos(angles, target_pos, target_ori, epsilon, right=False)
-
-
