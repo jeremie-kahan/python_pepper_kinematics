@@ -110,7 +110,11 @@ def cross(j, v):
 # L'objectif repose sur la transmission de fortes puissances, la nécessité de fonctionnement à jeu nul, le contrôle de la répartition d'efforts, de pressions dans les contacts, la maîtrise de l'usure, des coincements, les conditions de montage et les contraintes induites, le tolérancement, sont autant de notions qui découlent de la maîtrise de l'architecture et de l'analyse des mécanismes.
 # L'analyse préliminaire des mécanismes doit en général (mais pas ici car Pepper est déjà conçu) de choisir les liaisons d'un mécanisme dans une démarche de conception et dimensionnement d'un produit afin de répondre à un cahier des charges. Elle permet en particulier de prévoir si la détermination des inconnues statiques/dynamiques est possible à l'aide de résolutions usuelles et, dans le cas contraire, d'en localiser l'origine. Mais on se contentera de l'étude cinématique dans ce projet.
 
-
+# HYPOTHESES
+# - Les pièces sont supposées indéformables,
+# - Les liaisons sont supposées à positionnements relatifs parfaits,
+# - Les liaisons sont supposées parfaites (sans frottement),
+# - Le jeu dans les liaisons est nul.
 
 
 
