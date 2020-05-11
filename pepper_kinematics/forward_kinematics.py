@@ -129,4 +129,9 @@ def cross(j, v):
 #    => Entre résultante et moment, tenter un changement de point.
 # - Identifier, si possible, la liaison équivalente parmi les liaisons usuelles.
 
-#{█(a a@b b@c c)}
+# APPLICATION DE LA METHODE
+# {V6/5} = {P6/5 Q6/5 R6/5  U6/5 V6/5 W6/5}
+# {V5/4} = {P5/4 Q5/4 R5/4  U5/4 V5/4 W5/4}
+# {V4/3} = {P4/3 Q4/3 R4/3  U4/3 V4/3 W4/3}
+# {V3/2} = {P3/2 Q3/2 R3/2  U3/2 V3/2 W3/2}
+# {V2/1} = {P2/1 Q2/1 R2/1  U2/1 V2/1 W2/1}
