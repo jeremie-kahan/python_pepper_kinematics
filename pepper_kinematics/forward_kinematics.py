@@ -116,6 +116,16 @@ def cross(j, v):
 # - Les liaisons sont supposées parfaites (sans frottement),
 # - Le jeu dans les liaisons est nul.
 
-
-
+# Le système étudié est une chaîne ouverte dont est composé le graphe de structure/liaison qui est alors isostatique.
+# LIAISONS EN SERIE
+# Lorsque deux pièces sont reliées par plusieurs liaisons successives, la liaison équivalente entre ces deux pièces possède un degré de mobilité supérieur ou égal au maximum des dégrés de mobilité de chaque liaison intermédiaire.
+# METHODE CINEMATIQUE
+# - Choisir un point P et une base B
+# - Exprimer les 6 torseurs cinématiques en P dans B des liaisons {V6/1}, {V6/5}, {V5/4}, {V4/3}, {V3/2} et {V2/1}
+# - Par composition du mouvement, on a comme précisé précédemment : {V6/1} = {V6/5} + {V5/4} +  {V4/3} +  {V3/2} +  {V2/1}
+# - On exprime alors le torseur cinématique {V6/1} = {P6/1 Q6/1 R6/1  U6/1 V6/1 W6/1} en P dans B, en fonction de ses inconnues cinématiques, indépendantes non nulles.
+# - S'il y a présence d'inconnues dépendantes :
+#    => Dans des mêmes composantes de la résultante et du moment, tenter un changement de base,
+#    => Entre résultante et moment, tenter un changement de point.
+# - Identifier, si possible, la liaison équivalente parmi les liaisons usuelles.
 
