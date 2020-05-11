@@ -128,3 +128,5 @@ def cross(j, v):
 #    => Dans des mêmes composantes de la résultante et du moment, tenter un changement de base,
 #    => Entre résultante et moment, tenter un changement de point.
 # - Identifier, si possible, la liaison équivalente parmi les liaisons usuelles.
+
+#{█(a a@b b@c c)}
