@@ -130,7 +130,7 @@ def cross(j, v):
 #    => Entre résultante et moment, tenter un changement de point.
 # - Identifier, si possible, la liaison équivalente parmi les liaisons usuelles.
 
-# APPLICATION DE LA METHODE
+# APPLICATION DE LA METHODE en E dans la base B (X, Y, Z)
 # {V6/5} = {P6/5 Q6/5 R6/5  U6/5 V6/5 W6/5}E = {0 0 R6/5  0 0 0}E = {R6/5.z   0}E
 # {V5/4} = {P5/4 Q5/4 R5/4  U5/4 V5/4 W5/4}D = {0 0 R6/5  0 0 0}D = {R5/4.z   0}D
 # {V4/3} = {P4/3 Q4/3 R4/3  U4/3 V4/3 W4/3}C = {0 0 R6/5  0 0 0}C = {R4/3.z'  0}C
