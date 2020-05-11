@@ -98,5 +98,10 @@ def cross(j, v):
 
 # On travaille sur les bras du Pepper pour en faire une simulation de cinématique (ici directe) et ajouter une forme de proprioception permettant au Pepper d'avoir un contrôle sur ses bras en tout instant.
 # Il s'agit d'une chaîne ouverte.
+
 # Le graphe des liaisons se résume à une succession de liaison pivot :
 # Tronc (bâti) <PIVOT_Epaule_Tangage> Epaule <PIVOT_Epaule_Roulis> Avant-bras <PIVOT_Coude_Lacet> Coude <PIVOT_Coude_Roulis> bras <PIVOT_Poignet_Lacet> main
+# 1 <PIVOT_Epaule_Tangage> 2 <PIVOT_Epaule_Roulis> 3 <PIVOT_Coude_Lacet> 4 <PIVOT_Coude_Roulis> 5 <PIVOT_Poignet_Lacet> 6
+
+# Expression des torseurs cinématiques des liaisons en série :
+# {V6/1} = {V6/5} + {V5/4} +  {V4/3} +  {V3/2} +  {V2/1}
