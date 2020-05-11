@@ -131,8 +131,8 @@ def cross(j, v):
 # - Identifier, si possible, la liaison équivalente parmi les liaisons usuelles.
 
 # APPLICATION DE LA METHODE en E dans la base B (X, Y, Z)
-# {V6/5} = {P6/5 Q6/5 R6/5  U6/5 V6/5 W6/5}E = {0 Q6/5 0  0 0 0}E = {Q6/5.y   0}E = {Q6/5.y               0}E = {Q6/5.y               0}E
-# {V5/4} = {P5/4 Q5/4 R5/4  U5/4 V5/4 W5/4}D = {0 0 R6/5  0 0 0}D = {R5/4.z   0}D = {R5/4.z + DE^R5/4.z   0}E = {R5/4.z + DE^R5/4.z   0}E
-# {V4/3} = {P4/3 Q4/3 R4/3  U4/3 V4/3 W4/3}C = {0 0 R6/5  0 0 0}C = {R4/3.z'  0}C = {R4/3.z' + CE^R4/3.z' 0}E = {R4/3.(cos(9).z - sin(9).x) + CE^R4/3.(cos(9).z - sin(9).x) 0}E
-# {V3/2} = {P3/2 Q3/2 R3/2  U3/2 V3/2 W3/2}B = {0 0 R6/5  0 0 0}B = {R3/2.z'  0}B = {R3/2.z' + BE^R3/2.z' 0}E = {R3/2.(cos(9).z - sin(9).x) + BE^R3/2.(cos(9).z - sin(9).x) 0}E
-# {V2/1} = {P2/1 Q2/1 R2/1  U2/1 V2/1 W2/1}A = {0 0 R6/5  0 0 0}A = {R2/1.z'  0}A = {R2/1.z' + AE^R2/1.z' 0}E = {R2/1.(cos(9).z - sin(9).x) + AE^R2/1.(cos(9).z - sin(9).x) 0}E
+# {V6/5} = {P6/5 Q6/5 R6/5  U6/5 V6/5 W6/5}E = {0 Q6/5 0  0 0 0}E = {Q6/5.y   0}E = {Q6/5.y                                         0}E = {Q6/5.y               0}E
+# {V5/4} = {P5/4 Q5/4 R5/4  U5/4 V5/4 W5/4}D = {0 0 R6/5  0 0 0}D = {R5/4.z   0}D = {R5/4.z  + DE.x'^R5/4.z                         0}E = {R5/4.z + DE^R5/4.z   0}E
+# {V4/3} = {P4/3 Q4/3 R4/3  U4/3 V4/3 W4/3}C = {0 0 R6/5  0 0 0}C = {R4/3.z'  0}C = {R4/3.z' + (CD.x + DE.x')^R4/3.z'               0}E = {R4/3.(cos(9).z - sin(9).x) + CE^R4/3.(cos(9).z - sin(9).x) 0}E
+# {V3/2} = {P3/2 Q3/2 R3/2  U3/2 V3/2 W3/2}B = {0 0 R6/5  0 0 0}B = {R3/2.z'  0}B = {R3/2.z' + ((BC + CD).x + DE.x')^R3/2.z'        0}E = {R3/2.(cos(9).z - sin(9).x) + BE^R3/2.(cos(9).z - sin(9).x) 0}E
+# {V2/1} = {P2/1 Q2/1 R2/1  U2/1 V2/1 W2/1}A = {0 0 R6/5  0 0 0}A = {R2/1.z'  0}A = {R2/1.z' + (AB.y + (BC + CD).x + DE.x')^R2/1.z' 0}E = {R2/1.(cos(9).z - sin(9).x) + AE^R2/1.(cos(9).z - sin(9).x) 0}E
