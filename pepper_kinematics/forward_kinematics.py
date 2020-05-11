@@ -95,4 +95,8 @@ def cross(j, v):
     t1 = j[2][0] * v[0][0] - j[0][0] * v[2][0]
     t2 = j[0][0] * v[1][0] - j[1][0] * v[0][0]
     return np.array([[t0], [t1], [t2]])
-        
+
+# On travaille sur les bras du Pepper pour en faire une simulation de cinématique (ici directe) et ajouter une forme de proprioception permettant au Pepper d'avoir un contrôle sur ses bras en tout instant.
+# Il s'agit d'une chaîne ouverte.
+# Le graphe des liaisons se résume à une succession de liaison pivot :
+# Tronc (bâti) <PIVOT_Epaule_Tangage> Epaule <PIVOT_Epaule_Roulis> Avant-bras <PIVOT_Coude_Lacet> Coude <PIVOT_Coude_Roulis> bras <PIVOT_Poignet_Lacet> main
