@@ -37,27 +37,27 @@ def _calc_invJ(J, epsilon = 0.01):
 
 ##########################################################
 #https://digitalcommons.wpi.edu/cgi/viewcontent.cgi?article=3252&context=mqp-all
-def LoadDatabase(lambda_sygle):
-def NewDatabase(lambda_sygle):
-def db_Nearest(pose, K):
-def InCollision(p):
-def IterativeJacobianIK(p, pose):
-def isExact(p):
-def nn_Add(p):
-def nn_Nearest(pose):
-def nn_Nearest(pose):
-def distance(nearest, pose):
+#def LoadDatabase(lambda_sygle):
+#def NewDatabase(lambda_sygle):
+#def db_Nearest(pose, K):
+#def InCollision(p):
+#def IterativeJacobianIK(p, pose):
+#def isExact(p):
+#def nn_Add(p):
+#def nn_Nearest(pose):
+#def nn_Nearest(pose):
+#def distance(nearest, pose):
 
 
-def inverted_kinematics(pose, lambda_sygle, threshold, K):
-    db = LoadDatabase(lambda_sygle)
-    nn = NewDatabase(lambda_sygle)
-    for p in db_Nearest(pose, K):
-        if not InCollision(p):
-            p = IterativeJacobianIK(p, pose)
-            if isExact(p):
-                nn_Add(p)
-    nearest = nn_Nearest(pose)
-    if distance(nearest, pose) < threshold:
-        return nearest
+#def inverted_kinematics(pose, lambda_sygle, threshold, K):
+#    db = LoadDatabase(lambda_sygle)
+#    nn = NewDatabase(lambda_sygle)
+#    for p in db_Nearest(pose, K):
+#        if not InCollision(p):
+#            p = IterativeJacobianIK(p, pose)
+#            if isExact(p):
+#                nn_Add(p)
+#    nearest = nn_Nearest(pose)
+#    if distance(nearest, pose) < threshold:
+#        return nearest
     
