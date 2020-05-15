@@ -100,3 +100,33 @@ def right_arm_set_position(angles, target_pos, target_ori, epsilon=0.0001):
 
 def left_arm_set_position(angles, target_pos, target_ori, epsilon = 0.0001):
     return ik.calc_inv_pos(angles, target_pos, target_ori, epsilon, right=False)
+
+def right_orientation(angles):
+    """
+    (position, orientation) = (np.array([position_x, position_y, position_z]), np.array([[R00, R01, R02], [R10, R11, R12], [R20, R21, R22]]))
+    """
+    (position, orientation) = right_arm_get_position(angles)
+    orientation[2][0] = - (orientation[0][0] + orientation[1][0])
+    orientation[2][1] = - (orientation[0][1] + orientation[1][1])
+    orientation[2][2] = - (orientation[0][2] + orientation[1][2])
+    return orientation
+
+def left_orientation(angles):
+    """
+    (position, orientation) = (np.array([position_x, position_y, position_z]), np.array([[R00, R01, R02], [R10, R11, R12], [R20, R21, R22]]))
+    """
+    (position, orientation) = left_arm_get_position(angles)
+    orientation[2][0] = - (orientation[0][0] + orientation[1][0])
+    orientation[2][1] = - (orientation[0][1] + orientation[1][1])
+    orientation[2][2] = - (orientation[0][2] + orientation[1][2])
+    return orientation
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
