@@ -143,23 +143,92 @@ def left_body_limits (angles, epsilon=0.001, left_asked_position):
     else:
         res = "Beyond limits"
         
-        
+    step = 0
+    delta = 0
     while (res == False and delta < epsilon): 
-        delta = left_asked_position[0] - left_position[0]
+        delta = left_asked_position[1] - left_position[1]
         if(delta <= epsilon):
            res = True
-        left_position[0] -= step
+        left_position[1] -= step
         step += 0.0001
-        left_position[0] += step
+        left_position[1] += step
+   
+    if res_temp == True
+        res_temp = False
+    else:
+        res = "Beyond limits"
         
-def right_body_limits (angles, epsilon=0.001, right_asked_position, right_asked_orientation):
+    step = 0
+    delta = 0
+    while (res == False and delta < epsilon): 
+        delta = left_asked_position[2] - left_position[2]
+        if(delta <= epsilon):
+           res = True
+        left_position[2] -= step
+        step += 0.0001
+        left_position[2] += step
+   
+    if res_temp == True
+        res_temp = False
+    else:
+        res = "Beyond limits"
+    
+    return res
+
+
+
+def right_body_limits (angles, epsilon=0.001, right_asked_position):
     """
     (position, orientation) = (np.array([position_x, position_y, position_z]), np.array([[R00, R01, R02], [R10, R11, R12], [R20, R21, R22]]))
-    """ 
+    """
     (right_position, right_orientation) = right_arm_get_position(angles)
-    res = False
-    while (res == False and step < epsilon): 
-        if(right_asked_position[0] - right_position[0]) <= epsilon):
+    res_temp = False
+    res = "Within limits"
+    step = 0
+    delta = 0
+    while (res == False and delta < epsilon): 
+        delta = right_asked_position[0] - right_position[0]
+        if(delta <= epsilon):
            res = True
+        right_position[0] -= step
+        step += 0.0001
+        right_position[0] += step
+   
+    if res_temp == True
+        res_temp = False
+    else:
+        res = "Beyond limits"
+        
+    step = 0
+    delta = 0
+    while (res == False and delta < epsilon): 
+        delta = left_asked_position[1] - left_position[1]
+        if(delta <= epsilon):
+           res = True
+        right_position[1] -= step
+        step += 0.0001
+        right_position[1] += step
+   
+    if res_temp == True
+        res_temp = False
+    else:
+        res = "Beyond limits"
+        
+    step = 0
+    delta = 0
+    while (res == False and delta < epsilon): 
+        delta = right_asked_position[2] - right_position[2]
+        if(delta <= epsilon):
+           res = True
+        right_position[2] -= step
+        step += 0.0001
+        right_position[2] += step
+   
+    if res_temp == True
+        res_temp = False
+    else:
+        res = "Beyond limits"
+    
+    return res        
     
     
